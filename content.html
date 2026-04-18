@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Accordion Page with Themes</title>
+<link rel="stylesheet" href="css.css">
+</head>
+
+<body data-theme="dark">
+
+<header>
+  <div class="container_content nav">
+    <a href="/" class="logo">
+      <img src="https://media.canva.com/v2/image-resize/format:PNG/height:686/quality:100/uri:ifs%3A%2F%2FM%2F44f30e8a-fe66-4d39-ada6-53cc31f4a6de/watermark:F/width:681?csig=AAAAAAAAAAAAAAAAAAAAADsNUdym-O3IHetOAYE6fEGeVv6xYDBvHkndO2CO4gAK&exp=1776469562&osig=AAAAAAAAAAAAAAAAAAAAAK6HOGjLwcJFugPHzxgDS4-d4mWLiRkMeSaP7xo7j7vI&signer=media-rpc&x-canva-quality=screen_3x" alt="Logo">
+    </a>
+
+    <div class="right-group">
+      <div class="select-wrapper">
+        <select id="themeSelect">
+          <option value="dark">🌙 Dark</option>
+          <option value="light">☀️ Light</option>
+          <option value="forest">🌲 Forest</option>
+          <option value="frost">❄️ Frost</option>
+          <option value="orange">🍊 Orange</option>
+          <option value="blue">🔵 Blue</option>
+          <option value="gold">✨ Gold</option>
+        </select>
+
+        <svg viewBox="0 0 20 20" fill="none">
+          <path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</header>
+
+<span id="measure"></span>
+
+<main class="container_content">
+  <h1>Resources</h1>
+
+  <!-- Plain Text Section -->
+  <p>This is a simple text section, here you can add additional content that doesn't require an accordion. Just update the content as you need.</p>
+
+</main>
+
+<button id="backToTop" aria-label="Back to top">↑</button>
+
+<footer>
+  <p>Thank you for visiting! 🙏 ధన్యవాదాలు!</p>
+</footer>
+<script src="js.js"></script>
+</body>
+</html>
