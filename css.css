@@ -313,3 +313,14 @@ main.container_content {
     width: 100%;
   }
 }
+
+p {
+  line-height: 2;
+}
+
+/* paragraphs that contain <br> get extra spacing */
+p br {
+  content: "";
+  display: block;
+  margin-bottom: 6px; /* adjust as needed */
+}
