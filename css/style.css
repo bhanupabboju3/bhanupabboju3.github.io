@@ -324,3 +324,82 @@ p br {
   display: block;
   margin-bottom: 6px; /* adjust as needed */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   AUDIO FIGURE - CONTAINED CARD STYLE
+   ========================= */
+
+figure {
+  margin: 1.5rem auto;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  /* KEY FIX: prevent full-width stretching */
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* responsive width behavior */
+  width: fit-content;
+  max-width: 100%;
+}
+
+/* Caption */
+figure figcaption {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 100%;
+}
+
+/* Audio player */
+figure audio {
+  width: 320px;         /* default desktop size */
+  max-width: 100%;      /* responsive shrink */
+  border-radius: 8px;
+}
+
+/* Accessibility focus */
+figure audio:focus {
+  outline: 3px solid var(--primary);
+  outline-offset: 4px;
+}
+
+/* =========================
+   RESPONSIVE BREAKPOINTS
+   ========================= */
+
+@media (max-width: 768px) {
+  figure audio {
+    width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  figure audio {
+    width: 100%;
+  }
+}
