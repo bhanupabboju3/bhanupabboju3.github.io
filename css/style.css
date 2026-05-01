@@ -404,3 +404,85 @@ figure audio:focus {
     width: 100%;
   }
 }
+
+
+
+
+
+/* =========================
+   BUTTON SYSTEM (UNIFORM)
+   ========================= */
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+  max-width: 100%;
+}
+
+/* Single reusable button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* ✅ Increased width further */
+  padding: 0.65rem 1.8rem;
+
+  /* ✅ Prevent very small buttons */
+  min-width: 140px;
+
+  border-radius: 999px;
+  border: 1px solid var(--border);
+
+  background: var(--surface);
+  color: var(--text);
+
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  /* Content-based sizing */
+  width: auto;
+  flex: 0 0 auto;
+  white-space: nowrap;
+
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+/* =========================
+   THEME-SPECIFIC TEXT COLORS
+   ========================= */
+
+body[data-theme="dark"] .btn { color: #9CA3AF; }
+body[data-theme="light"] .btn { color: #6b7280; }
+body[data-theme="forest"] .btn { color: #6EE7B7; }
+body[data-theme="frost"] .btn { color: #38bdf8; }
+body[data-theme="orange"] .btn { color: #000000; }
+body[data-theme="blue"] .btn { color: #B0A9D1; }
+body[data-theme="gold"] .btn { color: #333300; }
+
+/* =========================
+   HOVER / INTERACTION
+   ========================= */
+
+.btn:hover,
+.btn:focus {
+  transform: translateY(-2px);
+  opacity: 0.95;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
