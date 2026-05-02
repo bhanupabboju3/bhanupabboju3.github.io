@@ -70,3 +70,56 @@ backToTop.addEventListener("click", () => {
     behavior: "smooth"
   });
 });
+
+
+
+// SOCIAL SHARE
+const shareButtons = document.querySelectorAll(".share-btn");
+const pageUrl = window.location.href;
+const pageTitle = document.title;
+
+shareButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const action = btn.dataset.action;
+
+    switch(action) {
+      case "whatsapp":
+        window.open(
+          `https://api.whatsapp.com/send?text=${encodeURIComponent(pageTitle + " " + pageUrl)}`,
+          "_blank"
+        );
+        break;
+
+      case "facebook":
+		const fbShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
+
+		const popup = window.open(fbShareUrl, "_blank", "width=600,height=500");
+
+		// fallback if popup blocked
+		if (!popup) {
+			window.location.href = fbShareUrl;
+		}
+		break;
+
+      case "email":
+        window.location.href =
+          `mailto:?subject=${encodeURIComponent(pageTitle)}&body=${encodeURIComponent(pageUrl)}`;
+        break;
+
+      case "copy":
+        navigator.clipboard.writeText(pageUrl).then(() => {
+          btn.style.background = "var(--primary)";
+          btn.style.color = "#fff";
+          setTimeout(() => {
+            btn.style.background = "";
+            btn.style.color = "";
+          }, 900);
+        });
+        break;
+
+      case "print":
+        window.print();
+        break;
+    }
+  });
+});
