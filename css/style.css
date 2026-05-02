@@ -491,7 +491,7 @@ body[data-theme="gold"] .btn { color: #333300; }
 
 
 /* =========================
-   SOCIAL SHARE
+   SOCIAL SHARE (BASE)
    ========================= */
 
 .social-share {
@@ -502,19 +502,19 @@ body[data-theme="gold"] .btn { color: #333300; }
   border: 1px solid var(--border);
   border-radius: 12px;
 
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 0.6rem;
 
-  width: fit-content;
   max-width: 100%;
 }
 
-/* BUTTON */
+/* ICON BUTTON */
 .share-btn {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
 
   display: flex;
   align-items: center;
@@ -528,6 +528,8 @@ body[data-theme="gold"] .btn { color: #333300; }
 
   cursor: pointer;
   transition: all 0.25s ease;
+
+  flex: 0 0 auto; /* 🔥 prevents stretching issues */
 }
 
 /* ICON */
@@ -552,47 +554,54 @@ body[data-theme="gold"] .btn { color: #333300; }
 }
 
 /* =========================
-   THEME FIXES
+   BLUE THEME FIX (UNCHANGED)
    ========================= */
 
-/* 🔥 BLUE THEME FINAL FIX */
 body[data-theme="blue"] .social-share {
   background: #2201E2;
 }
 
 body[data-theme="blue"] .share-btn {
-  background: #ffffff;     /* ✅ white background */
-  color: #2201E2;          /* ✅ dark icon */
-  border-color: #e5e7eb;   /* subtle border */
+  background: #ffffff;
+  color: #2201E2;
+  border-color: #e5e7eb;
 }
 
-/* keep existing hover feel */
 body[data-theme="blue"] .share-btn:hover {
   background: #5748ff;
   color: #ffffff;
 }
 
-/* ORANGE */
-body[data-theme="orange"] .share-btn {
-  color: #000000;
-}
-
-/* GOLD */
-body[data-theme="gold"] .share-btn {
-  color: #1f1f1f;
-}
-
 /* =========================
-   RESPONSIVE
+   RESPONSIVE FIX
    ========================= */
 
+/* 📱 MOBILE */
 @media (max-width: 480px) {
   .social-share {
-    width: 100%;
-    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
   }
 
   .share-btn {
-    flex: 1 1 18%;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* 📱 SMALL MOBILE (VERY IMPORTANT) */
+@media (max-width: 360px) {
+  .social-share {
+    gap: 0.4rem;
+  }
+
+  .share-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .share-btn svg {
+    width: 18px;
+    height: 18px;
   }
 }
