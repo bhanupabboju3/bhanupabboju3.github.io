@@ -491,7 +491,7 @@ body[data-theme="gold"] .btn { color: #333300; }
 
 
 /* =========================
-   SOCIAL SHARE (BASE)
+   SOCIAL SHARE BASE
    ========================= */
 
 .social-share {
@@ -507,12 +507,12 @@ body[data-theme="gold"] .btn { color: #333300; }
   justify-content: center;
   align-items: center;
   gap: 0.6rem;
-
-  max-width: 100%;
 }
 
-/* ICON BUTTON */
+/* BUTTON */
 .share-btn {
+  position: relative;
+
   width: 44px;
   height: 44px;
 
@@ -528,8 +528,6 @@ body[data-theme="gold"] .btn { color: #333300; }
 
   cursor: pointer;
   transition: all 0.25s ease;
-
-  flex: 0 0 auto; /* 🔥 prevents stretching issues */
 }
 
 /* ICON */
@@ -537,6 +535,7 @@ body[data-theme="gold"] .btn { color: #333300; }
   width: 20px;
   height: 20px;
   fill: currentColor;
+  display: block;
 }
 
 /* HOVER */
@@ -547,14 +546,36 @@ body[data-theme="gold"] .btn { color: #333300; }
   box-shadow: 0 6px 14px rgba(0,0,0,0.3);
 }
 
-/* FOCUS */
-.share-btn:focus-visible {
-  outline: 3px solid var(--primary);
-  outline-offset: 3px;
+/* TOOLTIP */
+.share-btn::after {
+  content: attr(data-label);
+  position: absolute;
+
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+
+  font-size: 11px;
+  padding: 4px 7px;
+  border-radius: 6px;
+
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+.share-btn:hover::after {
+  opacity: 1;
+  bottom: -36px;
 }
 
 /* =========================
-   BLUE THEME FIX (UNCHANGED)
+   BLUE THEME FIX
    ========================= */
 
 body[data-theme="blue"] .social-share {
@@ -573,14 +594,12 @@ body[data-theme="blue"] .share-btn:hover {
 }
 
 /* =========================
-   RESPONSIVE FIX
+   RESPONSIVE
    ========================= */
 
-/* 📱 MOBILE */
 @media (max-width: 480px) {
-  .social-share {
-    gap: 0.5rem;
-    padding: 0.75rem;
+  .share-btn::after {
+    display: none;
   }
 
   .share-btn {
@@ -589,19 +608,38 @@ body[data-theme="blue"] .share-btn:hover {
   }
 }
 
-/* 📱 SMALL MOBILE (VERY IMPORTANT) */
-@media (max-width: 360px) {
-  .social-share {
-    gap: 0.4rem;
-  }
+/* =========================
+   PRINT FIX (IMPORTANT)
+   ========================= */
 
+@media print {
+
+  /* optional: keep visible in print */
   .share-btn {
-    width: 38px;
-    height: 38px;
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #000000 !important;
   }
 
   .share-btn svg {
-    width: 18px;
-    height: 18px;
+    fill: #000000 !important;
   }
+
+  /* remove hover effects in print */
+  .share-btn:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  /* hide tooltips in print */
+  .share-btn::after {
+    display: none !important;
+  }
+
+  /* OPTIONAL (recommended alternative) */
+  /*
+  .social-share {
+    display: none;
+  }
+  */
 }
