@@ -486,3 +486,113 @@ body[data-theme="gold"] .btn { color: #333300; }
 .btn:active {
   transform: scale(0.96);
 }
+
+
+
+
+/* =========================
+   SOCIAL SHARE
+   ========================= */
+
+.social-share {
+  margin: 1.5rem auto;
+  padding: 1rem;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+
+  width: fit-content;
+  max-width: 100%;
+}
+
+/* BUTTON */
+.share-btn {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  border: 1px solid var(--border);
+
+  background: var(--bg);
+  color: var(--text);
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* ICON */
+.share-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* HOVER */
+.share-btn:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+/* FOCUS */
+.share-btn:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+
+/* =========================
+   THEME FIXES
+   ========================= */
+
+/* 🔥 BLUE THEME FINAL FIX */
+body[data-theme="blue"] .social-share {
+  background: #2201E2;
+}
+
+body[data-theme="blue"] .share-btn {
+  background: #ffffff;     /* ✅ white background */
+  color: #2201E2;          /* ✅ dark icon */
+  border-color: #e5e7eb;   /* subtle border */
+}
+
+/* keep existing hover feel */
+body[data-theme="blue"] .share-btn:hover {
+  background: #5748ff;
+  color: #ffffff;
+}
+
+/* ORANGE */
+body[data-theme="orange"] .share-btn {
+  color: #000000;
+}
+
+/* GOLD */
+body[data-theme="gold"] .share-btn {
+  color: #1f1f1f;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 480px) {
+  .social-share {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .share-btn {
+    flex: 1 1 18%;
+  }
+}
