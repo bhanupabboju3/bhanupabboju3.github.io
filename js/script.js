@@ -73,7 +73,6 @@ backToTop.addEventListener("click", () => {
 
 
 
-// SOCIAL SHARE
 const shareButtons = document.querySelectorAll(".share-btn");
 const pageUrl = window.location.href;
 const pageTitle = document.title;
@@ -83,6 +82,7 @@ shareButtons.forEach(btn => {
     const action = btn.dataset.action;
 
     switch(action) {
+
       case "whatsapp":
         window.open(
           `https://api.whatsapp.com/send?text=${encodeURIComponent(pageTitle + " " + pageUrl)}`,
@@ -91,15 +91,11 @@ shareButtons.forEach(btn => {
         break;
 
       case "facebook":
-		const fbShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
-
-		const popup = window.open(fbShareUrl, "_blank", "width=600,height=500");
-
-		// fallback if popup blocked
-		if (!popup) {
-			window.location.href = fbShareUrl;
-		}
-		break;
+        window.open(
+          `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`,
+          "_blank"
+        );
+        break;
 
       case "email":
         window.location.href =
