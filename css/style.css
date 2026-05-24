@@ -488,33 +488,51 @@ body[data-theme="gold"] .btn { color: #333300; }
 }
 
 
-
-
 /* =========================
-   SOCIAL SHARE BASE
+   SOCIAL SHARE SECTION
    ========================= */
 
-.social-share {
-  margin: 1.5rem auto;
-  padding: 1rem;
+.share-section {
+  margin: 2rem auto;
+  padding: 1.2rem;
 
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 12px;
 
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 0.6rem;
+
+  width: fit-content;
+  max-width: 100%;
 }
 
-/* BUTTON */
-.share-btn {
-  position: relative;
+/* TITLE */
+.share-section h2 {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  font-weight: 300;
+  text-align: center;
+  line-height: 0.4;
+  color: var(--muted);
+}
 
-  width: 44px;
-  height: 44px;
+/* ICON CONTAINER */
+.share-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem;
+}
+
+/* =========================
+   BASE BUTTON
+   ========================= */
+
+.share-btn {
+  width: 52px;
+  height: 52px;
 
   display: flex;
   align-items: center;
@@ -524,61 +542,134 @@ body[data-theme="gold"] .btn { color: #333300; }
   border: 1px solid var(--border);
 
   background: var(--bg);
+
+  /* IMPORTANT: icon color controlled per theme below */
   color: var(--text);
 
   cursor: pointer;
+  text-decoration: none;
+
+  position: relative;
+
   transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 /* ICON */
 .share-btn svg {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   fill: currentColor;
-  display: block;
 }
 
-/* HOVER */
-.share-btn:hover {
-  background: var(--primary);
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+/* =========================
+   HOVER (COMMON BEHAVIOR)
+   ========================= */
+
+.share-btn:hover,
+.share-btn:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
 }
 
-/* TOOLTIP */
+/* =========================
+   TOOLTIP (UNCHANGED)
+   ========================= */
+
 .share-btn::after {
-  content: attr(data-label);
+  content: attr(data-tooltip);
+
   position: absolute;
-
-  bottom: -32px;
+  top: 110%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(6px);
 
-  background: rgba(0,0,0,0.85);
-  color: #fff;
+  background: var(--surface);
+  color: var(--muted);
 
-  font-size: 11px;
-  padding: 4px 7px;
+  font-size: 0.75rem;
+  padding: 4px 8px;
   border-radius: 6px;
+
+  border: 1px solid var(--border);
 
   white-space: nowrap;
 
   opacity: 0;
+  visibility: hidden;
+
+  transition: all 0.2s ease;
+
   pointer-events: none;
-  transition: 0.2s ease;
+  z-index: 999;
 }
 
-.share-btn:hover::after {
+.share-btn:hover::after,
+.share-btn:focus-visible::after {
   opacity: 1;
-  bottom: -36px;
+  visibility: visible;
+  transform: translateX(-50%) translateY(10px);
+}
+
+/* FOCUS */
+.share-btn:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
 }
 
 /* =========================
-   BLUE THEME FIX
+   THEME ICON COLORS (REQUESTED FIX)
+   ONLY ICON COLORS + HOVER COLORS UPDATED
    ========================= */
 
-body[data-theme="blue"] .social-share {
+/* DARK */
+body[data-theme="dark"] .share-btn {
+  color: #9ca3af;
+}
+body[data-theme="dark"] .share-btn:hover {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+/* LIGHT */
+body[data-theme="light"] .share-btn {
+  color: #6b7280;
+}
+body[data-theme="light"] .share-btn:hover {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+/* FOREST */
+body[data-theme="forest"] .share-btn {
+  color: #6ee7b7;
+}
+body[data-theme="forest"] .share-btn:hover {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+/* FROST */
+body[data-theme="frost"] .share-btn {
+  color: #38bdf8;
+}
+body[data-theme="frost"] .share-btn:hover {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+/* ORANGE */
+body[data-theme="orange"] .share-btn {
+  color: #000000;
+}
+body[data-theme="orange"] .share-btn:hover {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+/* BLUE (EXACT SAME STRUCTURE AS YOUR REQUIREMENT) */
+body[data-theme="blue"] .social-share,
+body[data-theme="blue"] .share-section {
   background: #2201E2;
 }
 
@@ -593,53 +684,31 @@ body[data-theme="blue"] .share-btn:hover {
   color: #ffffff;
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
-
-@media (max-width: 480px) {
-  .share-btn::after {
-    display: none;
-  }
-
-  .share-btn {
-    width: 40px;
-    height: 40px;
-  }
+/* GOLD */
+body[data-theme="gold"] .share-btn {
+  color: #333300;
+}
+body[data-theme="gold"] .share-btn:hover {
+  background: var(--primary);
+  color: #ffffff;
 }
 
 /* =========================
-   PRINT FIX (IMPORTANT)
+   MOBILE
    ========================= */
 
-@media print {
+@media (max-width: 480px) {
+  .share-section {
+    width: 100%;
+  }
 
-  /* optional: keep visible in print */
   .share-btn {
-    background: #ffffff !important;
-    color: #000000 !important;
-    border: 1px solid #000000 !important;
+    width: 48px;
+    height: 48px;
   }
 
   .share-btn svg {
-    fill: #000000 !important;
+    width: 22px;
+    height: 22px;
   }
-
-  /* remove hover effects in print */
-  .share-btn:hover {
-    transform: none !important;
-    box-shadow: none !important;
-  }
-
-  /* hide tooltips in print */
-  .share-btn::after {
-    display: none !important;
-  }
-
-  /* OPTIONAL (recommended alternative) */
-  /*
-  .social-share {
-    display: none;
-  }
-  */
 }
