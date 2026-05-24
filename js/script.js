@@ -1,4 +1,6 @@
-// THEME SYSTEM
+/* =========================
+   THEME SYSTEM
+   ========================= */
 const select = document.getElementById("themeSelect");
 const measure = document.getElementById("measure");
 const backToTop = document.getElementById("backToTop");
@@ -34,7 +36,12 @@ select.addEventListener("change", () => {
   adjustWidth();
 });
 
-// ACCORDION
+
+
+
+/* =========================
+   ACCORDION
+   ========================= */
 document.querySelectorAll(".accordion-header").forEach(header => {
   header.addEventListener("click", () => {
     const item = header.parentElement;
@@ -55,7 +62,12 @@ document.querySelectorAll(".accordion-header").forEach(header => {
   });
 });
 
-// BACK TO TOP LOGIC
+
+
+
+/* =========================
+   BACK TO TOP LOGIC
+   ========================= */
 window.addEventListener("scroll", () => {
   if (window.scrollY > 150) {
     backToTop.style.display = "flex";
@@ -73,49 +85,58 @@ backToTop.addEventListener("click", () => {
 
 
 
-const shareButtons = document.querySelectorAll(".share-btn");
-const pageUrl = window.location.href;
+
+/* =========================
+   SOCIAL SHARE SYSTEM
+   ========================= */
+
+const currentPageUrl = window.location.href;
 const pageTitle = document.title;
 
-shareButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    const action = btn.dataset.action;
+/* WHATSAPP */
+document.getElementById("shareWhatsapp").addEventListener("click", (e) => {
+  e.preventDefault();
 
-    switch(action) {
+  const url = `https://wa.me/?text=${encodeURIComponent(pageTitle + " - " + currentPageUrl)}`;
+  window.open(url, "_blank");
+});
 
-      case "whatsapp":
-        window.open(
-          `https://api.whatsapp.com/send?text=${encodeURIComponent(pageTitle + " " + pageUrl)}`,
-          "_blank"
-        );
-        break;
+/* FACEBOOK */
+document.getElementById("shareFacebook").addEventListener("click", (e) => {
+  e.preventDefault();
 
-      case "facebook":
-        window.open(
-          `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`,
-          "_blank"
-        );
-        break;
+  const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentPageUrl)}`;
+  window.open(url, "_blank");
+});
 
-      case "email":
-        window.location.href =
-          `mailto:?subject=${encodeURIComponent(pageTitle)}&body=${encodeURIComponent(pageUrl)}`;
-        break;
+/* EMAIL */
+document.getElementById("shareEmail").addEventListener("click", (e) => {
+  e.preventDefault();
 
-      case "copy":
-        navigator.clipboard.writeText(pageUrl).then(() => {
-          btn.style.background = "var(--primary)";
-          btn.style.color = "#fff";
-          setTimeout(() => {
-            btn.style.background = "";
-            btn.style.color = "";
-          }, 900);
-        });
-        break;
+  const url = `mailto:?subject=${encodeURIComponent(pageTitle)}&body=${encodeURIComponent(currentPageUrl)}`;
+  window.location.href = url;
+});
 
-      case "print":
-        window.print();
-        break;
-    }
-  });
+/* COPY LINK */
+document.getElementById("copyLink").addEventListener("click", async () => {
+  try {
+    await navigator.clipboard.writeText(currentPageUrl);
+
+    const btn = document.getElementById("copyLink");
+    const old = btn.getAttribute("data-tooltip");
+
+    btn.setAttribute("data-tooltip", "Copied!");
+
+    setTimeout(() => {
+      btn.setAttribute("data-tooltip", old);
+    }, 1500);
+
+  } catch {
+    alert("Failed to copy link.");
+  }
+});
+
+/* PRINT */
+document.getElementById("printPage").addEventListener("click", () => {
+  window.print();
 });
