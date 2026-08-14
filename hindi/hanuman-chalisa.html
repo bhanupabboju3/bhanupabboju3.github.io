@@ -1,237 +1,227 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="te">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>हनुमान् चालीसा</title>
-<link rel="stylesheet" href="../css/style.css">
-<link rel="icon" type="image/png" href="../media/images/favicon/favicon.png">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>हनुमान् चालीसा</title>
 
-<!-- OPEN GRAPH -->
+	<meta name="description" content="हनुमान चालीसा पढ़ें और भक्ति से भरी ऑडियो प्रस्तुति का आनंद लें।." />
 
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://bhanupabboju3.github.io/hindi/hanuman-chalisa.html">
+	<!-- OPEN GRAPH -->
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="हनुमान् चालीसा">
+	<meta property="og:description" content="हनुमान चालीसा पढ़ें और भक्ति से भरी ऑडियो प्रस्तुति का आनंद लें।">
+	<meta property="og:url" content="https://bhanupabboju3.github.io/hindi/hanuman-chalisa.html">
+	<meta property="og:image" content="https://bhanupabboju3.github.io/media/images/og/og.png">
+	<meta property="og:site_name" content="Devotional Lyrics">
+	<meta property="og:locale" content="hi_IN">
 
-<meta property="og:title" content="हनुमान् चालीसा">
-<meta property="og:description" content="हनुमान चालीसा पढ़ें और भक्ति से भरी ऑडियो प्रस्तुति का आनंद लें।">
-<meta property="og:image" content="https://bhanupabboju3.github.io/media/images/og/og.png">
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="../media/images/favicon/favicon.png">
 
-<meta property="og:site_name" content="Devotional Lyrics">
-<meta property="og:locale" content="hi_IN">
+	<!-- Stylesheet -->
+	<link rel="stylesheet" href="../css/styles.css" />
 </head>
-
-<body data-theme="dark">
-
-<header>
-  <div class="container_content nav">
-    <a href="../home.html" class="logo">
-      <img src="../media/images/logo/logo.png" alt="Logo">
+<body>
+  
+<a href="#main" class="skip-link">Skip to content</a>
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <a class="brand" href="../home.html" aria-label="Devotional Lyrics home">
+      <span class="brand-glyph" aria-hidden="true">ॐ</span>
+      <span class="brand-text">
+        <span class="brand-title">Devotional Lyrics</span>
+        <span class="brand-sub">Devotional Lyrics · భక్తి · भक्ति</span>
+      </span>
     </a>
-
-    <div class="right-group">
-      <div class="select-wrapper">
-        <select id="themeSelect">
-          <option value="dark">🌙 Dark</option>
-          <option value="light">☀️ Light</option>
-          <option value="forest">🌲 Forest</option>
-          <option value="frost">❄️ Frost</option>
-          <option value="orange">🍊 Orange</option>
-          <option value="blue">🔵 Blue</option>
-          <option value="gold">✨ Gold</option>
-        </select>
-
-        <svg viewBox="0 0 20 20" fill="none">
-          <path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
+    <div class="theme-switch">
+      <button id="themeBtn" type="button" class="theme-btn"
+              aria-haspopup="listbox" aria-expanded="false" aria-label="Choose theme">
+        <span class="swatch" aria-hidden="true"></span>
+        <span class="theme-label">Saffron</span>
+        <svg width="12" height="12" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 8l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+      <ul id="themeMenu" class="theme-menu" role="listbox" aria-label="Themes"></ul>
     </div>
   </div>
 </header>
 
-<span id="measure"></span>
+  <main id="main">
+    
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="../home.html">होम</a><span aria-hidden="true">›</span>
+        <a href="../hindi.html">हिन्दी</a><span aria-hidden="true">›</span>हनुमान चालीसा
+      </nav>
+      <div class="lyrics-head">
+        <p class="cat">हनुमान</p>
+        <h1>हनुमान चालीसा</h1>
+      </div>
+      <div class="audio-wrap">
+        <audio controls preload="none" aria-label="Audio recitation of हनुमान चालीसा">
+          <source src="../media/audio/hanuman-chalisa.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+        <p class="audio-note">एम. एस. सुब्बालक्ष्मी द्वारा प्रस्तुत ऑडियो सुनें:</p>
+      </div>
+      <article class="lyrics-card">
+        <pre class="lyrics-body" id="lyricsBody"><strong>श्लोक :</strong>
+श्री राम राम रामेति रमे रामे मनोरमे ।
+सहस्रनाम तत्तुल्यं रामनाम वरानने ॥
+		
+<strong>दोहा :</strong>
+श्री गुरु चरण सरोज रज निजमन मुकुर सुधारि ।
+वरणौ रघुवर विमलयश जो दायक फलचारि ॥
+बुद्धिहीन तनुजानिकै सुमिरौ पवन कुमार ।
+बल बुद्धि विद्या देहु मोहि हरहु कलेश विकार ॥
 
-<main class="container_content">
-  <h1>हनुमान् चालीसा</h1>
+<strong>चौपाई :</strong> 
+जय हनुमान ज्ञान गुण सागर ।
+जय कपीश तिहु लोक उजागर ॥ 1 ॥
 
-<!-- BUTTON GROUP -->
-<div class="button-group">
-  <a href="../telugu/hanuman-chalisa.html" class="btn">తెలుగు</a>
-  <a href="../english/hanuman-chalisa.html" class="btn">English</a>
-</div>
+रामदूत अतुलित बलधाम ।
+अंजनि पुत्र पवनसुत नामा ॥ 2 ॥
 
-  <!-- Audio Section -->
-<figure>
-  <figcaption>एम. एस. सुब्बालक्ष्मी द्वारा प्रस्तुत ऑडियो सुनें:</figcaption>
-  <audio controls aria-describedby="hanuman-chalisa">
-    <source src="../media/audio/hanuman-chalisa.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-</figure>
+महावीर विक्रम बजरंगी ।
+कुमति निवार सुमति के संगी ॥ 3 ॥
 
+कंचन वरन विराज सुवेशा ।
+कानन कुंडल कुंचित केशा ॥ 4 ॥
 
-<!-- SOCIAL SHARE SECTION -->
-<section class="share-section">
-  <h2>शेयर करें ➦</h2>
+हाथवज्र औ ध्वजा विराजै ।
+कांधे मूंज जनेऊ साजै ॥ 5 ॥
 
-  <div class="share-icons">
+शंकर सुवन केसरी नंदन ।
+तेज प्रताप महाजग वंदन ॥ 6 ॥
 
-    <!-- WhatsApp -->
-    <a
-      href="#"
-      class="share-btn"
-      id="shareWhatsapp"
-      aria-label="Share on WhatsApp"
-      data-tooltip="WhatsApp"
-    >
-      <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M20.52 3.48A11.82 11.82 0 0012.07 0C5.5 0 .16 5.35.16 11.93c0 2.1.55 4.15 1.59 5.96L0 24l6.29-1.64a11.88 11.88 0 005.78 1.48h.01c6.57 0 11.91-5.35 11.92-11.93a11.84 11.84 0 00-3.48-8.43zm-8.45 18.3h-.01a9.9 9.9 0 01-5.04-1.38l-.36-.21-3.73.97 1-3.63-.24-.37a9.9 9.9 0 01-1.52-5.23c0-5.48 4.46-9.94 9.95-9.94a9.87 9.87 0 017.03 2.91 9.87 9.87 0 012.91 7.03c0 5.49-4.46 9.95-9.94 9.95zm5.45-7.44c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.48-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.08-.8.37-.27.3-1.05 1.02-1.05 2.48 0 1.46 1.08 2.87 1.23 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.27.48 1.7.61.71.22 1.36.19 1.87.12.57-.08 1.77-.72 2.02-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/>
-      </svg>
-    </a>
+विद्यावान गुणी अति चातुर ।
+राम काज करिवे को आतुर ॥ 7 ॥
 
-    <!-- Facebook -->
-    <a href="#" class="share-btn" id="shareFacebook" aria-label="Share on Facebook" data-tooltip="Facebook">
-      <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0022 12"/>
-      </svg>
-    </a>
+प्रभु चरित्र सुनिवे को रसिया ।
+रामलखन सीता मन बसिया ॥ 8 ॥
 
-    <!-- Email -->
-    <a href="#" class="share-btn" id="shareEmail" aria-label="Share via Email" data-tooltip="Email">
-      <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5z"/>
-      </svg>
-    </a>
+सूक्ष्म रूप धरि सियहि दिखावा ।
+विकट रूप धरि लंक जरावा ॥ 9 ॥
 
-    <!-- Copy Link -->
-	<button class="share-btn" id="copyLink" aria-label="Copy Link" type="button" data-tooltip="Copy Link">
-	  <svg viewBox="0 0 24 24" fill="currentColor">
-		<path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
-	  </svg>
-	</button>
+भीम रूप धरि असुर संहारे ।
+रामचंद्र के काज संवारे ॥ 10 ॥
 
-    <!-- Print -->
-    <button class="share-btn" id="printPage" aria-label="Print Page" type="button" data-tooltip="Print">
-      <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M6 9V2h12v7H6zm2-5h8v3H8V4zm10 6H6c-2.21 0-4 1.79-4 4v4h4v4h12v-4h4v-4c0-2.21-1.79-4-4-4zm-2 10H8v-5h8v5z"/>
-      </svg>
-    </button>
+लाय सजीवन लखन जियाए ।
+श्री रघुवीर हरषि उर लाए ॥ 11 ॥
 
-  </div>
-</section>
+रघुपति कीन्ही बहुत बड़ाई ।
+तुम मम प्रिय भरत सम भाई ॥ 12 ॥
+कहा भरत सम तुम प्रिय भाई ॥ 12 ॥
 
+सहस्र वदन तुम्हरो यश गावै ।
+अस कहि श्रीपति कंठ लगावै ॥ 13 ॥
 
-  <!-- Plain Text Section -->
-<p><b>दोहा</b><br>
-श्री गुरु चरण सरोज रज निजमन मुकुर सुधारि ।<br>
-वरणौ रघुवर विमलयश जो दायक फलचारि ॥<br>
-बुद्धिहीन तनुजानिकै सुमिरौ पवन कुमार ।<br>
-बल बुद्धि विद्या देहु मोहि हरहु कलेश विकार ॥</p>
-<p><b>ध्यानम्</b><br>
-अतुलित बलधामं स्वर्ण शैलाभ देहम् ।<br>
-दनुज वन कृशानुं ज्ञानिना मग्रगण्यम् ॥ <br>
-सकल गुण निधानं वानराणा मधीशम् । <br>
-रघुपति प्रिय भक्तं वातजातं नमामि ॥ </p>
-<p>गोष्पदीकृत वाराशिं मशकीकृत राक्षसम् ।<br>
-रामायण महामाला रत्नं वंदे-(अ)निलात्मजम् ॥<br>
-यत्र यत्र रघुनाथ कीर्तनं तत्र तत्र कृतमस्तकांजलिम् ।<br>
-भाष्पवारि परिपूर्ण लोचनं मारुतिं नमत राक्षसांतकम् ॥</p>
-<p>मनोजवं मारुत तुल्यवेगम् । <br>
-जितेंद्रियं बुद्धि मतां वरिष्टम् ॥ <br>
-वातात्मजं वानरयूथ मुख्यम् । <br>
-श्री राम दूतं शिरसा नमामि ॥ </p>
-<p><b>चौपाई</b><br>
-जय हनुमान ज्ञान गुण सागर ।<br>
-जय कपीश तिहु लोक उजागर ॥ 1 ॥</p>
-<p>रामदूत अतुलित बलधामा ।<br>
-अंजनि पुत्र पवनसुत नामा ॥ 2 ॥</p>
-<p>महावीर विक्रम बजरंगी ।<br>
-कुमति निवार सुमति के संगी ॥3 ॥</p>
-<p>कंचन वरण विराज सुवेशा ।<br>
-कानन कुंडल कुंचित केशा ॥ 4 ॥</p>
-<p>हाथवज्र औ ध्वजा विराजै । [औरु]<br>
-कांथे मूंज जनेवू साजै ॥ 5॥</p>
-<p>शंकर सुवन केसरी नंदन । [शंकर स्वयं]<br>
-तेज प्रताप महाजग वंदन ॥ 6 ॥</p>
-<p>विद्यावान गुणी अति चातुर ।<br>
-राम काज करिवे को आतुर ॥ 7 ॥</p>
-<p>प्रभु चरित्र सुनिवे को रसिया ।<br>
-रामलखन सीता मन बसिया ॥ 8॥</p>
-<p>सूक्ष्म रूपधरि सियहि दिखावा ।<br>
-विकट रूपधरि लंक जलावा ॥ 9 ॥</p>
-<p>भीम रूपधरि असुर संहारे ।<br>
-रामचंद्र के काज संवारे ॥ 10 ॥</p>
-<p>लाय संजीवन लखन जियाये ।<br>
-श्री रघुवीर हरषि उरलाये ॥ 11 ॥</p>
-<p>रघुपति कीन्ही बहुत बडायी (ई) ।<br>
-तुम मम प्रिय भरत सम भायी ॥ 12 ॥</p>
-<p>सहस्र वदन तुम्हरो यशगावै ।<br>
-अस कहि श्रीपति कंठ लगावै ॥ 13 ॥</p>
-<p>सनकादिक ब्रह्मादि मुनीशा ।<br>
-नारद शारद सहित अहीशा ॥ 14 ॥</p>
-<p>यम कुबेर दिगपाल जहां ते ।<br>
-कवि कोविद कहि सके कहां ते ॥ 15 ॥</p>
-<p>तुम उपकार सुग्रीवहि कीन्हा ।<br>
-राम मिलाय राजपद दीन्हा ॥ 16 ॥</p>
-<p>तुम्हरो मंत्र विभीषण माना ।<br>
-लंकेश्वर भये सब जग जाना ॥ 17 ॥</p>
-<p>युग सहस्र योजन पर भानू ।<br>
-लील्यो ताहि मधुर फल जानू ॥ 18 ॥</p>
-<p>प्रभु मुद्रिका मेलि मुख माही ।<br>
-जलधि लांघि गये अचरज नाही ॥ 19 ॥</p>
-<p>दुर्गम काज जगत के जेते ।<br>
-सुगम अनुग्रह तुम्हरे तेते ॥ 20 ॥</p>
-<p>राम दुआरे तुम रखवारे ।<br>
-होत न आज्ञा बिनु पैसारे ॥ 21 ॥</p>
-<p>सब सुख लहै तुम्हारी शरणा ।<br>
-तुम रक्षक काहू को डर ना ॥ 22 ॥</p>
-<p>आपन तेज सम्हारो आपै ।<br>
-तीनों लोक हांक ते कांपै ॥ 23 ॥</p>
-<p>भूत पिशाच निकट नहि आवै ।<br>
-महवीर जब नाम सुनावै ॥ 24 ॥</p>
-<p>नासै रोग हरै सब पीरा ।<br>
-जपत निरंतर हनुमत वीरा ॥ 25 ॥</p>
-<p>संकट से हनुमान छुडावै ।<br>
-मन क्रम वचन ध्यान जो लावै ॥ 26 ॥</p>
-<p>सब पर राम तपस्वी राजा । <br>
-तिनके काज सकल तुम साजा ॥ 27 ॥</p>
-<p>और मनोरथ जो कोयि लावै ।<br>
-तासु अमित जीवन फल पावै ॥ 28 ॥</p>
-<p>चारो युग प्रताप तुम्हारा ।<br>
-है परसिद्ध जगत उजियारा ॥ 29 ॥</p>
-<p>साधु संत के तुम रखवारे ।<br>
-असुर निकंदन राम दुलारे ॥ 30 ॥</p>
-<p>अष्ठसिद्धि नव निधि के दाता ।<br>
-अस वर दीन्ह जानकी माता ॥ 31 ॥</p>
-<p>राम रसायन तुम्हारे पासा ।<br>
-सदा रहो रघुपति के दासा ॥ 32 ॥ [साद रहो]</p>
-<p>तुम्हरे भजन रामको पावै ।<br>
-जन्म जन्म के दुख बिसरावै ॥ 33 ॥</p>
-<p>अंत काल रघुपति पुरजायी । [रघुवर]<br>
-जहां जन्म हरिभक्त कहायी ॥ 34 ॥</p>
-<p>और देवता चित्त न धरयी ।<br>
-हनुमत सेयि सर्व सुख करयी ॥ 35 ॥</p>
-<p>संकट क(ह)टै मिटै सब पीरा ।<br>
-जो सुमिरै हनुमत बल वीरा ॥ 36 ॥</p>
-<p>जै जै जै हनुमान गोसायी ।<br>
-कृपा करहु गुरुदेव की नायी ॥ 37 ॥</p>
-<p>यह शत वार पाठ कर कोयी । [जो]<br>
-छूटहि बंदि महा सुख होयी ॥ 38 ॥</p>
-<p>जो यह पडै हनुमान चालीसा ।<br>
-होय सिद्धि साखी गौरीशा ॥ 39 ॥</p>
-<p>तुलसीदास सदा हरि चेरा ।<br>
-कीजै नाथ हृदय मह डेरा ॥ 40 ॥</p>
-<p><b>दोहा</b><br>
-पवन तनय संकट हरण -  मंगल मूरति रूप् ।<br>
-राम लखन सीता सहित - हृदय बसहु सुरभूप् ॥<br>
-सियावर रामचंद्रकी जय । पवनसुत हनुमानकी जय । बोलो भायी सब संतनकी जय ।</p>
+सनकादिक ब्रह्मादि मुनीशा ।
+नारद शारद सहित अहीशा ॥ 14 ॥
 
-</main>
+यम कुबेर दिगपाल जहाँ ते ।
+कवि कोविद कहि सकै कहाँ ते ॥ 15 ॥
 
-<button id="backToTop" aria-label="Back to top">↑</button>
+तुम उपकार सुग्रीवहि कीन्हा ।
+राम मिलाय राजपद दीन्हा ॥ 16 ॥
 
-<footer>
-  <p>हार्दिक धन्यवाद! 🙏</p>
+तुम्हरो मंत्र विभीषण माना ।
+लंकेश्वर भये सब जग जाना ॥ 17 ॥
+
+युग सहस्र योजन पर भानू ।
+लील्यो ताहि मधुर फल जानू ॥ 18 ॥
+
+प्रभु मुद्रिका मेलि मुख माहीं ।
+जलधि लांघि गए अचरज नाहीं ॥ 19 ॥
+
+दुर्गम काज जगत के जेते ।
+सुगम अनुग्रह तुम्हरे तेते ॥ 20 ॥
+
+राम दुआरे तुम रखवारे ।
+होत न आज्ञा बिनु पैसारे ॥ 21 ॥
+
+सब सुख लहै तुम्हारी शरना ।
+तुम रक्षक काहू को डरना ॥ 22 ॥
+
+आपन तेज सम्हारो आपै ।
+तीनों लोक हांक तें कांपै ॥ 23 ॥
+
+भूत पिशाच निकट नहि आवै ।
+महावीर जब नाम सुनावै ॥ 24 ॥
+
+नासै रोग हरै सब पीरा ।
+जपत निरंतर हनुमत वीरा ॥ 25 ॥
+
+संकट से हनुमान छुड़ावै ।
+मन क्रम वचन ध्यान जो लावै ॥ 26 ॥
+
+सब पर राम तपस्वी राजा ।
+तिनके काज सकल तुम साजा ॥ 27 ॥
+
+और मनोरथ जो कोई लावै ।
+तासु अमित जीवन फल पावै ॥ 28 ॥
+
+चारों युग प्रताप तुम्हारा ।
+है परसिद्ध जगत उजियारा ॥ 29 ॥
+
+साधु संत के तुम रखवारे ।
+असुर निकंदन राम दुलारे ॥ 30 ॥
+
+अष्टसिद्धि नव निधि के दाता ।
+अस वर दीन्ह जानकी माता ॥ 31 ॥
+
+राम रसायन तुम्हरे पासा ।
+सदा रहो रघुपति के दासा ॥ 32 ॥
+
+तुम्हरे भजन राम को पावै ।
+जन्म जन्म के दुख बिसरावै ॥ 33 ॥
+
+अंत काल रघुवर पुर जाई ।
+जहाँ जन्म हरिभक्त कहाई ॥ 34 ॥
+
+और देवता चित्त न धरई ।
+हनुमत सेई सर्व सुख करई ॥ 35 ॥
+
+संकट हटै मिटै सब पीरा ।
+जो सुमिरै हनुमत बलवीरा ॥ 36 ॥
+
+जय जय जय हनुमान गोसाईं ।
+कृपा करो गुरुदेव की नाईं ॥ 37 ॥
+
+यह शत वार पाठ कर जोई ।
+छूटहि बंदी महा सुख होई ॥ 38 ॥
+
+जो यह पढ़ै हनुमान चालीसा ।
+होय सिद्धि साखी गौरीशा ॥ 39 ॥
+
+तुलसीदास सदा हरि चेरा ।
+कीजै नाथ हृदय महँ डेरा ॥ 40 ॥
+
+<strong>दोहा :</strong>
+पवन तनय संकट हरण - मंगल मूरति रूप ।
+राम लखन सीता सहित - हृदय बसहु सुरभूप् ॥</pre>
+      </article>
+      <div class="actions" role="group" aria-label="Share and actions">
+        <a class="btn" href="https://wa.me/?text=हनुमान चालीसा — http://bhanupabboju3.github.io/hindi/hanuman-chalisa.html" target="_blank" rel="noopener"><span aria-hidden="true">💬</span><span class="label">व्हाट्सएप</span></a>
+        <a class="btn" href="https://www.facebook.com/sharer/sharer.php?u=http://bhanupabboju3.github.io/hindi/hanuman-chalisa.html" target="_blank" rel="noopener"><span aria-hidden="true">📘</span><span class="label">फेसबुक</span></a>
+        <a class="btn" href="mailto:?subject=हनुमान चालीसा&body=http://bhanupabboju3.github.io/hindi/hanuman-chalisa.html"><span aria-hidden="true">✉️</span><span class="label">ईमेल</span></a>
+        <button class="btn" id="copyBtn" type="button"><span aria-hidden="true">🔗</span><span class="label">लिंक कॉपी करें</span></button>
+        <button class="btn" id="printBtn" type="button"><span aria-hidden="true">🖨️</span><span class="label">प्रिंट</span></button>
+      </div>
+      
+        <aside class="translations" aria-label="Translations">
+          <h3>दूसरी भाषा में पढ़ें</h3>
+          <div class="links"><a href="../telugu/hanuman-chalisa.html">తెలుగు · హనుమాన్ చాలీసా</a><a href="../english/hanuman-chalisa.html">English · Hanuman Chalisa</a></div>
+        </aside>
+    </div>
+    
+  </main>
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-glyph" aria-hidden="true">✦ ॐ ✦</div>
+  <p class="footer-thanks">ये पवित्र श्लोक आपके हृदय को शांति, कृपा और दिव्य प्रकाश से भर दें।</p>
+  <p class="footer-multi">धन्यवाद · ధన్యవాదాలు · Thank you</p>
 </footer>
-<script src="../js/script.js" defer></script>
+
+  <script src="../js/script.js"></script>
 </body>
 </html>
