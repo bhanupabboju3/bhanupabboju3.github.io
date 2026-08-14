@@ -1,74 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Devotional Lyrics</title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="icon" type="image/png" href="media/images/favicon/favicon.png">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Devotional Lyrics in Telugu, Hindi and English</title>
 
-<!-- OPEN GRAPH -->
+	<meta name="description" content="Immerse yourself in sacred devotional lyrics and their soulful audio renditions.">
 
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://bhanupabboju3.github.io/home.html">
+	<!-- OPEN GRAPH -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Devotional Lyrics in Telugu, Hindi and English">
+	<meta property="og:description" content="Immerse yourself in sacred devotional lyrics and their soulful audio renditions.">
+	<meta property="og:url" content="https://bhanupabboju3.github.io/home.html">
+	<meta property="og:image" content="https://bhanupabboju3.github.io/media/images/og/og.png">
+	<meta property="og:site_name" content="Devotional Lyrics in Telugu, Hindi and English">
+	<meta property="og:locale" content="en_US">
 
-<meta property="og:title" content="Devotional Lyrics">
-<meta property="og:description" content="Immerse yourself in sacred devotional lyrics and their soulful audio renditions.">
-<meta property="og:image" content="https://bhanupabboju3.github.io/media/images/og/og.png">
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="media/images/favicon/favicon.png">
 
-<meta property="og:site_name" content="Devotional Lyrics">
-<meta property="og:locale" content="en_US">
+	<!-- Stylesheet -->
+	<link rel="stylesheet" href="css/styles.css" />
 </head>
-
-<body data-theme="dark">
-
-<header>
-  <div class="container_accordion nav">
-    <a href="home.html" class="logo">
-      <img src="media/images/logo/logo.png" alt="Logo">
+<body>
+  
+<a href="#main" class="skip-link">Skip to content</a>
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <a class="brand" href="home.html" aria-label="Devotional Lyrics home">
+      <span class="brand-glyph" aria-hidden="true">ॐ</span>
+      <span class="brand-text">
+        <span class="brand-title">Devotional Lyrics</span>
+        <span class="brand-sub">Devotional Lyrics · భక్తి · भक्ति</span>
+      </span>
     </a>
-
-    <div class="right-group">
-      <div class="select-wrapper">
-        <select id="themeSelect">
-          <option value="dark">🌙 Dark</option>
-          <option value="light">☀️ Light</option>
-          <option value="forest">🌲 Forest</option>
-          <option value="frost">❄️ Frost</option>
-          <option value="orange">🍊 Orange</option>
-          <option value="blue">🔵 Blue</option>
-          <option value="gold">✨ Gold</option>
-        </select>
-
-        <svg viewBox="0 0 20 20" fill="none">
-          <path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
+    <div class="theme-switch">
+      <button id="themeBtn" type="button" class="theme-btn"
+              aria-haspopup="listbox" aria-expanded="false" aria-label="Choose theme">
+        <span class="swatch" aria-hidden="true"></span>
+        <span class="theme-label">Saffron</span>
+        <svg width="12" height="12" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 8l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+      <ul id="themeMenu" class="theme-menu" role="listbox" aria-label="Themes"></ul>
     </div>
   </div>
 </header>
 
-<span id="measure"></span>
-
-<main class="container_accordion">
-  <h1>Resources</h1>
-
-  <div class="accordion-item">
-    <div class="accordion-header">Section 1 <span>+</span></div>
-    <div class="accordion-content">Content here</div>
-  </div>
-
-  <div class="accordion-item">
-    <div class="accordion-header">Section 2 <span>+</span></div>
-    <div class="accordion-content">More content here</div>
-  </div>
-</main>
-
-<button id="backToTop" aria-label="Back to top">↑</button>
-
-<footer>
-  <p>Thank you for visiting! 🙏</p>
+  <main id="main">
+    
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="hero-eyebrow">ॐ · श्री · ఓం</p>
+        <h1>Devotional lyrics,<br/><span class="grad">in your language</span></h1>
+        <p>Stotras, chalisas, and bhajans dedicated to various deities — read in Telugu, Hindi, and English, with accompanying audio.</p>
+      </div>
+    </section>
+    <section class="container">
+      <div class="lang-grid">
+      <a class="lang-card" data-lang="telugu" href="telugu.html" aria-label="Browse Telugu devotional lyrics">
+        <div class="inner">
+          <span class="halo" aria-hidden="true"></span>
+          <span class="glyph" aria-hidden="true">ఓం</span>
+          <h2>Telugu</h2>
+          <p class="native">తెలుగు</p>
+          <p class="tag">భక్తి గీతాలు</p>
+          <span class="enter">Enter <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+      <a class="lang-card" data-lang="hindi" href="hindi.html" aria-label="Browse Hindi devotional lyrics">
+        <div class="inner">
+          <span class="halo" aria-hidden="true"></span>
+          <span class="glyph" aria-hidden="true">ॐ</span>
+          <h2>Hindi</h2>
+          <p class="native">हिन्दी</p>
+          <p class="tag">भक्ति गीत</p>
+          <span class="enter">Enter <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+      <a class="lang-card" data-lang="english" href="english.html" aria-label="Browse English devotional lyrics">
+        <div class="inner">
+          <span class="halo" aria-hidden="true"></span>
+          <span class="glyph" aria-hidden="true">Om</span>
+          <h2>English</h2>
+          <p class="native">English</p>
+          <p class="tag">Devotional Lyrics</p>
+          <span class="enter">Enter <span aria-hidden="true">→</span></span>
+        </div>
+      </a></div>
+    </section>
+    
+  </main>
+  
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-glyph" aria-hidden="true">✦ ॐ ✦</div>
+  <p class="footer-thanks">May these sacred verses fill your heart with peace, grace, and divine light.</p>
+  <p class="footer-multi">Thank you · ధన్యవాదాలు · धन्यवाद</p>
 </footer>
-<script src="js/script.js" defer></script>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
