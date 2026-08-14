@@ -1,237 +1,228 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="te">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Hanuman Chalisa</title>
-<link rel="stylesheet" href="../css/style.css">
-<link rel="icon" type="image/png" href="../media/images/favicon/favicon.png">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Hanuman Chalisa</title>
 
-<!-- OPEN GRAPH -->
+	<meta name="description" content="Read and listen to Hanuman Chalisa with devotional audio rendition." />
 
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://bhanupabboju3.github.io/english/hanuman-chalisa.html">
+	<!-- OPEN GRAPH -->
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Hanuman Chalisaా">
+	<meta property="og:description" content="Read and listen to Hanuman Chalisa with devotional audio rendition.">
+	<meta property="og:url" content="https://bhanupabboju3.github.io/telugu/hanuman-chalisa.html">
+	<meta property="og:image" content="https://bhanupabboju3.github.io/media/images/og/og.png">
+	<meta property="og:site_name" content="Devotional Lyrics">
+	<meta property="og:locale" content="te_IN">
 
-<meta property="og:title" content="Hanuman Chalisa">
-<meta property="og:description" content="Read and listen to Hanuman Chalisa with devotional audio rendition.">
-<meta property="og:image" content="https://bhanupabboju3.github.io/media/images/og/og.png">
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="../media/images/favicon/favicon.png">
 
-<meta property="og:site_name" content="Devotional Lyrics">
-<meta property="og:locale" content="en_US">
+	<!-- Stylesheet -->
+	<link rel="stylesheet" href="../css/styles.css" />
 </head>
-
-<body data-theme="dark">
-
-<header>
-  <div class="container_content nav">
-    <a href="../home.html" class="logo">
-      <img src="../media/images/logo/logo.png" alt="Logo">
+<body>
+  
+<a href="#main" class="skip-link">Skip to content</a>
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <a class="brand" href="../home.html" aria-label="Devotional Lyrics home">
+      <span class="brand-glyph" aria-hidden="true">ॐ</span>
+      <span class="brand-text">
+        <span class="brand-title">Devotional Lyrics</span>
+        <span class="brand-sub">Devotional Lyrics · భక్తి · भक्ति</span>
+      </span>
     </a>
-
-    <div class="right-group">
-      <div class="select-wrapper">
-        <select id="themeSelect">
-          <option value="dark">🌙 Dark</option>
-          <option value="light">☀️ Light</option>
-          <option value="forest">🌲 Forest</option>
-          <option value="frost">❄️ Frost</option>
-          <option value="orange">🍊 Orange</option>
-          <option value="blue">🔵 Blue</option>
-          <option value="gold">✨ Gold</option>
-        </select>
-
-        <svg viewBox="0 0 20 20" fill="none">
-          <path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
+    <div class="theme-switch">
+      <button id="themeBtn" type="button" class="theme-btn"
+              aria-haspopup="listbox" aria-expanded="false" aria-label="Choose theme">
+        <span class="swatch" aria-hidden="true"></span>
+        <span class="theme-label">Saffron</span>
+        <svg width="12" height="12" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 8l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+      <ul id="themeMenu" class="theme-menu" role="listbox" aria-label="Themes"></ul>
     </div>
   </div>
 </header>
 
-<span id="measure"></span>
+  <main id="main">
+    
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="../home.html">Home</a><span aria-hidden="true">›</span>
+        <a href="../english.html">English</a><span aria-hidden="true">›</span>Hanuman Chalisa
+      </nav>
+      <div class="lyrics-head">
+        <p class="cat">Hanuman</p>
+        <h1>Hanuman Chalisa</h1>
+      </div>
+      <div class="audio-wrap">
+        <audio controls preload="none" aria-label="Audio recitation of Hanuman Chalisa">
+          <source src="../media/audio/hanuman-chalisa.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+        <p class="audio-note">Listen to audio Rendition by M. S. Subbalakshmi:</p>
+      </div>
+      <article class="lyrics-card">
+        <pre class="lyrics-body" id="lyricsBody"><strong>Shloka</strong>
+Shri Rama Rama Rameti Rame Rame Manorame ।
+Sahasranama Tat Tulyam Rama Nama Varanane ॥
 
-<main class="container_content">
-  <h1>Hanuman Chalisa</h1>
+<strong>Doha</strong>
+Shri Guru Charana Saroja Raja Nijamana Mukura Sudhari ।
+Varanau Raghuvara Vimalayasha Jo Dayaka Phalachari ॥
+Buddhihina Tanu Janikai Sumirau Pavana Kumar ।
+Bala Buddhi Vidya Dehu Mohi Harahu Kalesha Vikara ॥
 
-<!-- BUTTON GROUP -->
-<div class="button-group">
-  <a href="../telugu/hanuman-chalisa.html" class="btn">తెలుగు</a>
-  <a href="../hindi/hanuman-chalisa.html" class="btn">हिन्दी</a>
-</div>
+<strong>Chaupai</strong>
+Jaya Hanumana Gnana Guna Sagara ।
+Jaya Kapisha Tihu Loka Ujagara ॥ 1 ॥
 
-  <!-- Audio Section -->
-<figure>
-  <figcaption>Listen to audio Rendition by M. S. Subbalakshmi:</figcaption>
-  <audio controls aria-describedby="hanuman-chalisa">
-    <source src="../media/audio/hanuman-chalisa.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-</figure>
+Ramaduta Atulita Baladhama ।
+Anjani Putra Pavanasuta Nama ॥ 2 ॥
 
+Mahavira Vikrama Bajarangi ।
+Kumati Nivara Sumati Ke Sangi ॥ 3 ॥
 
-<!-- SOCIAL SHARE SECTION -->
-<section class="share-section">
-  <h2>Share ➦</h2>
+Kanchana Varana Viraja Suvesha ।
+Kanana Kundala Kunchita Keshaa ॥ 4 ॥
 
-  <div class="share-icons">
+Hathavajra Au Dhvaja Virajai ।
+Kandhe Moonja Janevu Sajai ॥ 5 ॥
 
-    <!-- WhatsApp -->
-    <a
-      href="#"
-      class="share-btn"
-      id="shareWhatsapp"
-      aria-label="Share on WhatsApp"
-      data-tooltip="WhatsApp"
-    >
-      <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M20.52 3.48A11.82 11.82 0 0012.07 0C5.5 0 .16 5.35.16 11.93c0 2.1.55 4.15 1.59 5.96L0 24l6.29-1.64a11.88 11.88 0 005.78 1.48h.01c6.57 0 11.91-5.35 11.92-11.93a11.84 11.84 0 00-3.48-8.43zm-8.45 18.3h-.01a9.9 9.9 0 01-5.04-1.38l-.36-.21-3.73.97 1-3.63-.24-.37a9.9 9.9 0 01-1.52-5.23c0-5.48 4.46-9.94 9.95-9.94a9.87 9.87 0 017.03 2.91 9.87 9.87 0 012.91 7.03c0 5.49-4.46 9.95-9.94 9.95zm5.45-7.44c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.48-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.08-.8.37-.27.3-1.05 1.02-1.05 2.48 0 1.46 1.08 2.87 1.23 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.27.48 1.7.61.71.22 1.36.19 1.87.12.57-.08 1.77-.72 2.02-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/>
-      </svg>
-    </a>
+Shankara Suvana Kesari Nandana ।
+Teja Pratapa Mahajaga Vandana ॥ 6 ॥
 
-    <!-- Facebook -->
-    <a href="#" class="share-btn" id="shareFacebook" aria-label="Share on Facebook" data-tooltip="Facebook">
-      <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0022 12"/>
-      </svg>
-    </a>
+Vidyavana Guni Ati Chatura ।
+Rama Kaja Karive Ko Atura ॥ 7 ॥
 
-    <!-- Email -->
-    <a href="#" class="share-btn" id="shareEmail" aria-label="Share via Email" data-tooltip="Email">
-      <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5z"/>
-      </svg>
-    </a>
+Prabhu Charitra Suniveko Rasiya ।
+Ramalakhana Sita Mana Basiya ॥ 8 ॥
 
-    <!-- Copy Link -->
-	<button class="share-btn" id="copyLink" aria-label="Copy Link" type="button" data-tooltip="Copy Link">
-	  <svg viewBox="0 0 24 24" fill="currentColor">
-		<path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
-	  </svg>
-	</button>
+Sukshma Rupadhari Siyahi Dikhava ।
+Vikata Rupadhari Lanka Jarava ॥ 9 ॥
 
-    <!-- Print -->
-    <button class="share-btn" id="printPage" aria-label="Print Page" type="button" data-tooltip="Print">
-      <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M6 9V2h12v7H6zm2-5h8v3H8V4zm10 6H6c-2.21 0-4 1.79-4 4v4h4v4h12v-4h4v-4c0-2.21-1.79-4-4-4zm-2 10H8v-5h8v5z"/>
-      </svg>
-    </button>
+Bhima Rupa Dhari Asura Samhare ।
+Ramachandra Ke Kaja Sanvare ॥ 10 ॥
 
-  </div>
-</section>
+Laya Sajivana Lakhana Jiyaye ।
+Shri Raghuvira Harashi Ura Laye ॥ 11 ॥
 
+Raghupati Kihni Bahuta Badai ।
+Tuma Mama Priya Bharata Sama Bhai ॥ 12 ॥
+Kaha Bharata Sama Tuma Priya Bhai ॥ 12 ॥
 
-  <!-- Plain Text Section -->
-<p><b>dōhā</b><br>
-śrī guru charaṇa sarōja raja nijamana mukura sudhāri ।<br>
-varaṇau raghuvara vimalayaśa jō dāyaka phalachāri ॥<br>
-buddhihīna tanujānikai sumirau pavana kumāra ।<br>
-bala buddhi vidyā dēhu mōhi harahu kalēśa vikāra ॥</p>
-<p><b>dhyānam</b><br>
-atulita baladhāmaṃ svarṇa śailābha dēham ।<br>
-danuja vana kṛśānuṃ jñāninā magragaṇyam ॥ <br>
-sakala guṇa nidhānaṃ vānarāṇā madhīśam । <br>
-raghupati priya bhaktaṃ vātajātaṃ namāmi ॥ </p>
-<p>gōṣpadīkṛta vārāśiṃ maśakīkṛta rākṣasam ।<br>
-rāmāyaṇa mahāmālā ratnaṃ vandē-(a)nilātmajam ॥<br>
-yatra yatra raghunātha kīrtanaṃ tatra tatra kṛtamastakāñjalim ।<br>
-bhāṣpavāri paripūrṇa lōchanaṃ mārutiṃ namata rākṣasāntakam ॥</p>
-<p>manōjavaṃ māruta tulyavēgam । <br>
-jitēndriyaṃ buddhi matāṃ variṣṭam ॥ <br>
-vātātmajaṃ vānarayūtha mukhyam । <br>
-śrī rāma dūtaṃ śirasā namāmi ॥ </p>
-<p><b>chaupāī</b><br>
-jaya hanumāna jñāna guṇa sāgara ।<br>
-jaya kapīśa tihu lōka ujāgara ॥ 1 ॥</p>
-<p>rāmadūta atulita baladhāmā ।<br>
-añjani putra pavanasuta nāmā ॥ 2 ॥</p>
-<p>mahāvīra vikrama bajaraṅgī ।<br>
-kumati nivāra sumati kē saṅgī ॥3 ॥</p>
-<p>kañchana varaṇa virāja suvēśā ।<br>
-kānana kuṇḍala kuñchita kēśā ॥ 4 ॥</p>
-<p>hāthavajra au dhvajā virājai । [auru]<br>
-kānthē mūñja janēvū sājai ॥ 5॥</p>
-<p>śaṅkara suvana kēsarī nandana । [śaṅkara svayaṃ]<br>
-tēja pratāpa mahājaga vandana ॥ 6 ॥</p>
-<p>vidyāvāna guṇī ati chātura ।<br>
-rāma kāja karivē kō ātura ॥ 7 ॥</p>
-<p>prabhu charitra sunivē kō rasiyā ।<br>
-rāmalakhana sītā mana basiyā ॥ 8॥</p>
-<p>sūkṣma rūpadhari siyahi dikhāvā ।<br>
-vikaṭa rūpadhari laṅka jalāvā ॥ 9 ॥</p>
-<p>bhīma rūpadhari asura saṃhārē ।<br>
-rāmachandra kē kāja saṃvārē ॥ 10 ॥</p>
-<p>lāya sañjīvana lakhana jiyāyē ।<br>
-śrī raghuvīra haraṣi uralāyē ॥ 11 ॥</p>
-<p>raghupati kīnhī bahuta baḍāyī (ī) ।<br>
-tuma mama priya bharata sama bhāyī ॥ 12 ॥</p>
-<p>sahasra vadana tumharō yaśagāvai ।<br>
-asa kahi śrīpati kaṇṭha lagāvai ॥ 13 ॥</p>
-<p>sanakādika brahmādi munīśā ।<br>
-nārada śārada sahita ahīśā ॥ 14 ॥</p>
-<p>yama kubēra digapāla jahāṃ tē ।<br>
-kavi kōvida kahi sakē kahāṃ tē ॥ 15 ॥</p>
-<p>tuma upakāra sugrīvahi kīnhā ।<br>
-rāma milāya rājapada dīnhā ॥ 16 ॥</p>
-<p>tumharō mantra vibhīṣaṇa mānā ।<br>
-laṅkēśvara bhayē saba jaga jānā ॥ 17 ॥</p>
-<p>yuga sahasra yōjana para bhānū ।<br>
-līlyō tāhi madhura phala jānū ॥ 18 ॥</p>
-<p>prabhu mudrikā mēli mukha māhī ।<br>
-jaladhi lāṅghi gayē acharaja nāhī ॥ 19 ॥</p>
-<p>durgama kāja jagata kē jētē ।<br>
-sugama anugraha tumharē tētē ॥ 20 ॥</p>
-<p>rāma duārē tuma rakhavārē ।<br>
-hōta na ājñā binu paisārē ॥ 21 ॥</p>
-<p>saba sukha lahai tumhārī śaraṇā ।<br>
-tuma rakṣaka kāhū kō ḍara nā ॥ 22 ॥</p>
-<p>āpana tēja samhārō āpai ।<br>
-tīnōṃ lōka hāṅka tē kāmpai ॥ 23 ॥</p>
-<p>bhūta piśācha nikaṭa nahi āvai ।<br>
-mahavīra jaba nāma sunāvai ॥ 24 ॥</p>
-<p>nāsai rōga harai saba pīrā ।<br>
-japata nirantara hanumata vīrā ॥ 25 ॥</p>
-<p>saṅkaṭa sē hanumāna Chuḍāvai ।<br>
-mana krama vachana dhyāna jō lāvai ॥ 26 ॥</p>
-<p>saba para rāma tapasvī rājā । <br>
-tinakē kāja sakala tuma sājā ॥ 27 ॥</p>
-<p>aura manōratha jō kōyi lāvai ।<br>
-tāsu amita jīvana phala pāvai ॥ 28 ॥</p>
-<p>chārō yuga pratāpa tumhārā ।<br>
-hai parasiddha jagata ujiyārā ॥ 29 ॥</p>
-<p>sādhu santa kē tuma rakhavārē ।<br>
-asura nikandana rāma dulārē ॥ 30 ॥</p>
-<p>aṣṭhasiddhi nava nidhi kē dātā ।<br>
-asa vara dīnha jānakī mātā ॥ 31 ॥</p>
-<p>rāma rasāyana tumhārē pāsā ।<br>
-sadā rahō raghupati kē dāsā ॥ 32 ॥ [sāda rahō]</p>
-<p>tumharē bhajana rāmakō pāvai ।<br>
-janma janma kē dukha bisarāvai ॥ 33 ॥</p>
-<p>anta kāla raghupati purajāyī । [raghuvara]<br>
-jahāṃ janma haribhakta kahāyī ॥ 34 ॥</p>
-<p>aura dēvatā chitta na dharayī ।<br>
-hanumata sēyi sarva sukha karayī ॥ 35 ॥</p>
-<p>saṅkaṭa ka(ha)ṭai miṭai saba pīrā ।<br>
-jō sumirai hanumata bala vīrā ॥ 36 ॥</p>
-<p>jai jai jai hanumāna gōsāyī ।<br>
-kṛpā karahu gurudēva kī nāyī ॥ 37 ॥</p>
-<p>yaha śata vāra pāṭha kara kōyī । [jō]<br>
-Chūṭahi bandi mahā sukha hōyī ॥ 38 ॥</p>
-<p>jō yaha paḍai hanumāna chālīsā ।<br>
-hōya siddhi sākhī gaurīśā ॥ 39 ॥</p>
-<p>tulasīdāsa sadā hari chērā ।<br>
-kījai nātha hṛdaya maha ḍērā ॥ 40 ॥</p>
-<p><b>dōhā</b><br>
-pavana tanaya saṅkaṭa haraṇa -  maṅgaḻa mūrati rūp ।<br>
-rāma lakhana sītā sahita - hṛdaya basahu surabhūp ॥<br>
-siyāvara rāmachandrakī jaya । pavanasuta hanumānakī jaya । bōlō bhāyī saba santanakī jaya ।</p>
+Sahasra Vadana Tumharo Yasha Gavai ।
+Asa Kahi Shripati Kantha Lagavai ॥ 13 ॥
 
-</main>
+Sanakadika Brahmadi Munisha ।
+Narada Sharada Sahita Ahisha ॥ 14 ॥
 
-<button id="backToTop" aria-label="Back to top">↑</button>
+Yama Kubera Digapala Jahate ।
+Kavi Kovida Kahi Sakai Kahate ॥ 15 ॥
 
-<footer>
-  <p>Thank you for visiting! 🙏</p>
+Tuma Upakara Sugrivahi Kinha ।
+Rama Milaya Rajapada Dinha ॥ 16 ॥
+
+Tumharo Mantra Vibhishana Mana ।
+Lankeshvara Bhaye Saba Jaga Jana ॥ 17 ॥
+
+Yuga Sahasra Yojana Para Bhanu ।
+Lilyo Tahi Madhura Phala Janu ॥ 18 ॥
+
+Prabhu Mudrika Meli Mukha Mahi ।
+Jaladhi Langhi Gaye Acharaja Nahi ॥ 19 ॥
+
+Durgama Kaja Jagata Ke Jete ।
+Sugama Anugraha Tumhare Tete ॥ 20 ॥
+
+Rama Duare Tuma Rakhavare ।
+Hota Na Agna Binu Paisare ॥ 21 ॥
+
+Saba Sukha Lahai Tumhari Sharana ।
+Tuma Rakshaka Kahu Ko Darana ॥ 22 ॥
+
+Apana Teja Samharo Apai ।
+Tino Loka Hanka Te Kampai ॥ 23 ॥
+
+Bhuta Pishacha Nikata Nahi Avai ।
+Mahavira Jaba Nama Sunavai ॥ 24 ॥
+
+Nasai Roga Harai Saba Pira ।
+Japata Nirantara Hanumata Vira ॥ 25 ॥
+
+Sankata Se Hanumana Chhudavai ।
+Mana Krama Vachana Dhyana Jo Lavai ॥ 26 ॥
+
+Saba Para Rama Tapasvi Raja ।
+Tinake Kaja Sakala Tuma Saja ॥ 27 ॥
+
+Aura Manoratha Jo Koyi Lavai ।
+Tasu Amita Jivana Phala Pavai ॥ 28 ॥
+
+Charo Yuga Pratapa Tumhara ।
+Hai Parasiddha Jagata Ujiyara ॥ 29 ॥
+
+Sadhu Santa Ke Tuma Rakhavare ।
+Asura Nikandana Rama Dulare ॥ 30 ॥
+
+Ashta Siddhi Nava Nidhi Ke Data ।
+Asa Vara Dinha Janaki Mata ॥ 31 ॥
+
+Rama Rasayana Tumhare Pasa ।
+Sada Raho Raghupati Ke Dasa ॥ 32 ॥
+
+Tumhare Bhajana Ramako Pavai ।
+Janma Janma Ke Dukha Bisaravai ॥ 33 ॥
+
+Anta Kala Raghupati Pur Jai ।
+Jaha Janma Hari Bhakta Kahai ॥ 34 ॥
+
+Aura Devata Chitta Na Dharai ।
+Hanumata Seyi Sarva Sukha Karai ॥ 35 ॥
+
+Sankata Hatai Mitai Saba Pira ।
+Jo Sumirai Hanumata Balavira ॥ 36 ॥
+
+Jai Jai Jai Hanumana Gosai ।
+Kripa Karo Gurudeva Ki Nai ॥ 37 ॥
+
+Yaha Shata Vara Patha Kara Joi ।
+Chhutahi Bandi Maha Sukha Hoi ॥ 38 ॥
+
+Jo Yaha Padhai Hanumana Chalisa ।
+Hoya Siddhi Sakhi Gaurisha ॥ 39 ॥
+
+Tulasi Dasa Sada Hari Chera ।
+Kijai Nadha Hrudaya Maha Dera ॥ 40 ॥
+
+<strong>Doha</strong>
+Pavana Tanaya Sankata Harana - Mangala Murati Rup ।
+Rama Lakhana Sita Sahita - Hrudaya Basahu Surabhup ॥</pre>
+      </article>
+      <div class="actions" role="group" aria-label="Share and actions">
+        <a class="btn" href="https://wa.me/?text=Hanuman Chalisa — http://bhanupabboju3.github.io/english/hanuman-chalisa.html" target="_blank" rel="noopener"><span aria-hidden="true">💬</span><span class="label">WhatsApp</span></a>
+        <a class="btn" href="https://www.facebook.com/sharer/sharer.php?u=http://bhanupabboju3.github.io/english/hanuman-chalisa.html" target="_blank" rel="noopener"><span aria-hidden="true">📘</span><span class="label">Facebook</span></a>
+        <a class="btn" href="mailto:?subject=Hanuman Chalisa&body=http://bhanupabboju3.github.io/english/hanuman-chalisa.html"><span aria-hidden="true">✉️</span><span class="label">Email</span></a>
+        <button class="btn" id="copyBtn" type="button"><span aria-hidden="true">🔗</span><span class="label">Copy link</span></button>
+        <button class="btn" id="printBtn" type="button"><span aria-hidden="true">🖨️</span><span class="label">Print</span></button>
+      </div>
+      
+        <aside class="translations" aria-label="Translations">
+          <h3>Read in another language</h3>
+          <div class="links"><a href="../telugu/hanuman-chalisa.html">తెలుగు · హనుమాన్ చాలీసా</a><a href="../hindi/hanuman-chalisa.html">हिन्दी · हनुमान चालीसा</a></div>
+        </aside>
+    </div>
+    
+  </main>
+  
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-glyph" aria-hidden="true">✦ ॐ ✦</div>
+  <p class="footer-thanks">Thank you for visiting Bhakti Dhara — may these verses bring you peace.</p>
+  <p class="footer-multi">धन्यवाद · ధన్యవాదాలు · Thank you</p>
 </footer>
-<script src="../js/script.js" defer></script>
+
+  <script src="../js/script.js"></script>
 </body>
 </html>
